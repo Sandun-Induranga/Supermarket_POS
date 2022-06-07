@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="600.0" prefWidth="1218.0" style="-fx-background-color: linear-gradient(to right top, #99e2b4, #72c2a2, #4fa38f, #2d847b, #036666);;" stylesheets="@assests/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supermarket.pos.controller.ManageCustomersFormController">
+   <children>
+      <TableView fx:id="tblCustomers" layoutX="428.0" layoutY="143.0" opacity="0.7" prefHeight="375.0" prefWidth="772.0" AnchorPane.bottomAnchor="42.0" AnchorPane.rightAnchor="18.0">
+        <columns>
+          <TableColumn prefWidth="79.0" text="ID" />
+          <TableColumn prefWidth="119.0" text="Title" />
+            <TableColumn prefWidth="159.0" text="Name" />
+            <TableColumn prefWidth="132.0" text="Address" />
+            <TableColumn prefWidth="100.0" text="City" />
+            <TableColumn minWidth="-Infinity" prefWidth="83.0" text="Province" />
+            <TableColumn minWidth="-Infinity" prefWidth="98.0" text="Postal Code" />
+        </columns>
+      </TableView>
+      <FontAwesomeIconView fill="#e4d9da" glyphName="ARROW_LEFT" layoutX="29.0" layoutY="62.0" onMouseClicked="#navigateToHome" size="40" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="32.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIconView>
+      <JFXTextField fx:id="txtID" focusColor="#5e548e" layoutX="40.0" layoutY="104.0" onKeyReleased="#textFieldsKeyReleasedOnAction" prefHeight="26.0" prefWidth="350.0" promptText="Customer ID" style="-fx-prompt-text-fill: white;" unFocusColor="#c4c4c4" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font name="Ubuntu" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTitle" focusColor="#5e548e" layoutX="40.0" layoutY="162.0" onKeyReleased="#textFieldsKeyReleasedOnAction" prefHeight="26.0" prefWidth="350.0" promptText="Customer Title" style="-fx-prompt-text-fill: white;" unFocusColor="#c4c4c4" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font name="Ubuntu" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" focusColor="#5e548e" layoutX="40.0" layoutY="226.0" onKeyReleased="#textFieldsKeyReleasedOnAction" prefHeight="26.0" prefWidth="350.0" promptText="Customer Name" style="-fx-prompt-text-fill: white;" unFocusColor="#c4c4c4" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font name="Ubuntu" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" focusColor="#5e548e" layoutX="40.0" layoutY="291.0" onKeyReleased="#textFieldsKeyReleasedOnAction" prefHeight="26.0" prefWidth="350.0" promptText="Customer Address" style="-fx-prompt-text-fill: white;" unFocusColor="#c4c4c4" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font name="Ubuntu" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCity" focusColor="#5e548e" layoutX="40.0" layoutY="353.0" onKeyReleased="#textFieldsKeyReleasedOnAction" prefHeight="26.0" prefWidth="350.0" promptText="City" style="-fx-prompt-text-fill: white;" unFocusColor="#c4c4c4" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font name="Ubuntu" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtProvince" focusColor="#5e548e" layoutX="40.0" layoutY="416.0" onKeyReleased="#textFieldsKeyReleasedOnAction" prefHeight="26.0" prefWidth="350.0" promptText="Province" style="-fx-prompt-text-fill: white;" unFocusColor="#c4c4c4" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font name="Ubuntu" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPostalCode" focusColor="#5e548e" layoutX="40.0" layoutY="477.0" onKeyReleased="#textFieldsKeyReleasedOnAction" prefHeight="26.0" prefWidth="350.0" promptText="Postal Code" style="-fx-prompt-text-fill: white;" unFocusColor="#c4c4c4" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font name="Ubuntu" size="16.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="472.0" layoutY="31.0" text="Manage Customers" textFill="WHITE" AnchorPane.topAnchor="32.0">
+         <font>
+            <Font name="Ubuntu Bold" size="40.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="40.0" layoutY="534.0" onAction="#btnSaveOnAction" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #ffb703;" text="SAVE" textFill="WHITE" AnchorPane.bottomAnchor="30.0">
+         <font>
+            <Font name="Ubuntu" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAddNew" buttonType="RAISED" layoutX="996.0" layoutY="36.0" onAction="#btnAddNewOnAction" prefHeight="38.0" prefWidth="193.0" style="-fx-background-color: #5e548e;" text="+ New Customer" textFill="WHITE" AnchorPane.topAnchor="38.0">
+         <font>
+            <Font name="Ubuntu" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="231.0" layoutY="532.0" onAction="#btnDeleteOnAction" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #5e548e;" text="DELETE" textFill="WHITE" AnchorPane.bottomAnchor="30.0">
+         <font>
+            <Font name="Ubuntu" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtSearch" layoutX="744.0" layoutY="135.0" onKeyReleased="#searchOnAction" opacity="0.7" prefHeight="26.0" prefWidth="284.0" promptText="Search here" />
+      <JFXComboBox fx:id="cmbSearchField" layoutX="525.0" layoutY="135.0" prefHeight="26.0" promptText="ID" style="-fx-prompt-text-fill: white;" unFocusColor="#cdcdcd" />
+   </children>
+</AnchorPane>

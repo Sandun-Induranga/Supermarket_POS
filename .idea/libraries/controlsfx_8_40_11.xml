@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="controlsfx-8.40.11">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/controlsfx-8.40.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-8.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jfoenix-8.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.28.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/TrayNotification-master.zip!/TrayNotification-master/src" />
+      <root url="jar://$PROJECT_DIR$/lib/TrayNotification-master.zip!/TrayNotification-master/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/lib/TrayNotification-master.zip!/TrayNotification-master/src/test/java" />
+    </SOURCES>
+  </library>
+</component>

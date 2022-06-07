@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: linear-gradient(to right top, #86b0e5, #79c6de, #97d5cd, #c3dfc6, #e9e7d1);;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supermarket.pos.controller.MainFormController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="950.0" layoutX="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@assests/supermarket.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="100.0" prefWidth="950.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="327.0" layoutY="26.0" text="SUPERMARKET" textFill="#333533">
+               <font>
+                  <Font name="Ubuntu Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="500.0" prefHeight="50.0" prefWidth="950.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" layoutY="19.0" text="Engineered By :  www.ijse.lk" textFill="#333533" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="17.0">
+               <font>
+                  <Font name="Ubuntu Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="763.0" layoutY="18.0" text="System Version  1.0.0" textFill="#333533" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="17.0">
+               <font>
+                  <Font name="Ubuntu Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <FontAwesomeIconView fx:id="btnCustomer" fill="#333533" glyphName="USERS" layoutX="70.0" layoutY="320.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" size="120" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="191.42857360839844">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <FontAwesomeIconView fx:id="btnItem" fill="#333533" glyphName="BRIEFCASE" layoutX="287.0" layoutY="301.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" size="130" AnchorPane.topAnchor="189.57142639160156">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <FontAwesomeIconView fx:id="btnPlaceOrder" fill="#333533" glyphName="LAPTOP" layoutX="521.0" layoutY="299.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" size="140" wrappingWidth="107.142873108387" AnchorPane.topAnchor="179.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <FontAwesomeIconView fx:id="btnInfo" fill="#333533" glyphName="BAR_CHART" layoutX="763.0" layoutY="292.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" size="120" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="189.14286041259766">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <Label fx:id="lblMenu" layoutX="398.0" layoutY="388.0" text="WELCOME" textFill="#333533">
+         <font>
+            <Font name="Ubuntu Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="321.0" text="Manage Customers" textFill="#333533">
+         <font>
+            <Font name="Ubuntu Bold Italic" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="287.0" layoutY="321.0" text="Manage Items" textFill="#333533">
+         <font>
+            <Font name="Ubuntu Bold Italic" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="533.0" layoutY="321.0" text="Place Ordres" textFill="#333533">
+         <font>
+            <Font name="Ubuntu Bold Italic" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="735.0" layoutY="321.0" text="Order Information" textFill="#333533">
+         <font>
+            <Font name="Ubuntu Bold Italic" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label fx:id="lblMenu1" layoutX="341.0" layoutY="427.0" text="Chosse one Item to get Started" textFill="#333533">
+         <font>
+            <Font name="Ubuntu Bold" size="18.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="btnLogOut" fill="#333533" glyphName="SIGN_OUT" layoutX="455.0" layoutY="519.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" size="40">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <Label fx:id="lblMenu11" layoutX="440.0" layoutY="525.0" text="Log Out" textFill="#333533">
+         <font>
+            <Font name="Ubuntu Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

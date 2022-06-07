@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="760.0" prefWidth="1218.0" style="-fx-background-color: linear-gradient(to right top, #99e2b4, #72c2a2, #4fa38f, #2d847b, #036666);;" stylesheets="@assests/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supermarket.pos.controller.ManageOrderDetailsFormController">
+   <children>
+      <TabPane layoutX="12.0" layoutY="7.0" prefHeight="645.0" prefWidth="1082.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="100.0">
+        <tabs>
+          <Tab text="Order Details">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblOrders" layoutX="57.0" layoutY="156.0" prefHeight="200.0" prefWidth="513.0">
+                          <columns>
+                            <TableColumn prefWidth="100.0" text="Order ID" />
+                            <TableColumn prefWidth="128.0" text="Order Date" />
+                              <TableColumn prefWidth="123.0" text="Customer ID" />
+                              <TableColumn prefWidth="161.0" text="Customer Name" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="tblOrderDetails" layoutX="57.0" layoutY="390.0" prefHeight="200.0" prefWidth="611.0">
+                           <columns>
+                              <TableColumn prefWidth="100.0" text="Item Code" />
+                              <TableColumn prefWidth="128.0" text="Description" />
+                              <TableColumn prefWidth="123.0" text="Pack Size" />
+                              <TableColumn prefWidth="74.0" text="Qty" />
+                              <TableColumn prefWidth="101.0" text="Unit Price" />
+                              <TableColumn prefWidth="84.0" text="Discount" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="txtSearch" layoutX="88.0" layoutY="114.0" onKeyReleased="#txtSearchOnAction" opacity="0.8" prefHeight="26.0" prefWidth="247.0" promptText="Search here" />
+                        <Label layoutX="88.0" layoutY="60.0" text="Search By :  " textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="20.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="cmbField" layoutX="213.0" layoutY="59.0" prefHeight="26.0" prefWidth="119.0" unFocusColor="#cdcdcd" />
+                        <JFXTextField fx:id="txtDescription" layoutX="855.0" layoutY="217.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="26.0" prefWidth="273.0" promptText="Description" style="-fx-prompt-text-fill: white;" unFocusColor="#cdcdcd" AnchorPane.rightAnchor="66.0">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtPackSize" layoutX="855.0" layoutY="279.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="26.0" prefWidth="273.0" promptText="Pack Size" style="-fx-prompt-text-fill: white;" unFocusColor="#cdcdcd" AnchorPane.rightAnchor="66.0">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtQty" layoutX="855.0" layoutY="340.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="26.0" prefWidth="273.0" promptText="Qty" style="-fx-prompt-text-fill: white;" unFocusColor="#cdcdcd" AnchorPane.rightAnchor="66.0">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtUnitPrice" layoutX="855.0" layoutY="407.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="26.0" prefWidth="273.0" promptText="Unit Price" style="-fx-prompt-text-fill: white;" unFocusColor="#cdcdcd" AnchorPane.rightAnchor="66.0">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtDiscount" layoutX="855.0" layoutY="474.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="26.0" prefWidth="273.0" promptText="Discount" style="-fx-prompt-text-fill: white;" unFocusColor="#cdcdcd" AnchorPane.rightAnchor="66.0">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="855.0" layoutY="538.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: orange;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="1053.0" layoutY="538.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: #f72585;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <Label fx:id="txtOrderID" layoutX="858.0" layoutY="111.0" prefHeight="16.0" prefWidth="267.0" text="Order ID" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btnAddNew" buttonType="RAISED" layoutX="989.0" layoutY="45.0" onAction="#btnAddNewOnAction" prefHeight="31.0" prefWidth="128.0" style="-fx-background-color: #8ecae6;" text="+ New Item" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXComboBox fx:id="cmbItemCode" layoutX="855.0" layoutY="160.0" prefHeight="26.0" prefWidth="275.0" promptText="Item Code" style="-fx-prompt-text-fill: white; -fx-font-size: 16; -fx-font-family: ubuntu;" unFocusColor="#cdcdcd" />
+                        <JFXButton fx:id="btnPrintBill" buttonType="RAISED" layoutX="618.0" layoutY="325.0" onAction="#btnPrintOnAction" prefHeight="31.0" prefWidth="130.0" style="-fx-background-color: orange;" text="Print The Bill" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabReports" text="Reports">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="23.0" layoutY="74.0" onAction="#btnViewMonthlyReportOnAction" style="-fx-background-color: #ff8800;" text="View Income Summery" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="20.0" />
+                           </font></JFXButton>
+                        <BarChart fx:id="chartIncome" layoutX="284.0" layoutY="48.0" prefHeight="378.0" prefWidth="749.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                        <JFXButton buttonType="RAISED" layoutX="63.0" layoutY="149.0" onAction="#btnViewMonthReportOnAction" style="-fx-background-color: #ff8800;" text="Monthly Sales" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="228.0" onAction="#btnViewDayReportOnAction" style="-fx-background-color: #ff8800;" text="Today Sales" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="80.0" layoutY="308.0" onAction="#btnViewYearReportOnAction" style="-fx-background-color: #ff8800;" text="Year Sales" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="20.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="89.0" layoutY="388.0" onAction="#btnViewAllReportOnAction" style="-fx-background-color: #ff8800;" text="All Sales" textFill="WHITE">
+                           <font>
+                              <Font name="Ubuntu" size="20.0" />
+                           </font>
+                        </JFXButton>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="305.0" layoutY="29.0" text="Search Order Information" textFill="WHITE">
+         <font>
+            <Font name="Ubuntu Bold" size="40.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" layoutX="37.0" layoutY="63.0" onMouseClicked="#btnBackOnAction" size="40" />
+   </children>
+</AnchorPane>

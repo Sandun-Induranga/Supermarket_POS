@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="600.0" prefWidth="1218.0" style="-fx-background-color: linear-gradient(to right top, #99e2b4, #72c2a2, #4fa38f, #2d847b, #036666);" stylesheets="@assests/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supermarket.pos.controller.ManageItemsFormController">
+    <children>
+        <TableView fx:id="tblItems" layoutX="459.0" layoutY="211.0" opacity="0.7" prefHeight="375.0" prefWidth="772.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="18.0">
+            <columns>
+                <TableColumn prefWidth="102.0" text="Code" />
+                <TableColumn prefWidth="195.0" text="Description" />
+                <TableColumn prefWidth="170.0" text="Pack Size" />
+                <TableColumn prefWidth="168.0" text="Unit Price" />
+                <TableColumn prefWidth="136.0" text="Qty On Hand" />
+            </columns>
+        </TableView>
+        <FontAwesomeIconView fx:id="btnBackToHome" fill="WHITE" glyphName="ARROW_LEFT" layoutX="29.0" layoutY="62.0" onMouseClicked="#navigateToHome" size="40" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="32.0" />
+        <JFXTextField fx:id="txtCode" focusColor="#5e548e" layoutX="40.0" layoutY="130.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="26.0" prefWidth="350.0" promptText="Item Code" style="fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="#c4c4c4" AnchorPane.leftAnchor="40.0">
+            <font>
+                <Font name="Ubuntu" size="16.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtDescription" focusColor="#5e548e" layoutX="40.0" layoutY="188.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="26.0" prefWidth="350.0" promptText="Item Description" style="fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="#c4c4c4" AnchorPane.leftAnchor="40.0">
+            <font>
+                <Font name="Ubuntu" size="16.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtPackSize" focusColor="#5e548e" layoutX="40.0" layoutY="252.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="26.0" prefWidth="350.0" promptText="Pack Size" style="fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="#c4c4c4" AnchorPane.leftAnchor="40.0">
+            <font>
+                <Font name="Ubuntu" size="16.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtUnitPrice" focusColor="#5e548e" layoutX="40.0" layoutY="317.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="26.0" prefWidth="350.0" promptText="Unit Price" style="fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="#c4c4c4" AnchorPane.leftAnchor="40.0">
+            <font>
+                <Font name="Ubuntu" size="16.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtQtyOnHand" focusColor="#5e548e" layoutX="40.0" layoutY="379.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="26.0" prefWidth="350.0" promptText="Qty On Hand" style="fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="#c4c4c4" AnchorPane.leftAnchor="40.0">
+            <font>
+                <Font name="Ubuntu" size="16.0" />
+            </font>
+        </JFXTextField>
+        <Label layoutX="495.0" layoutY="32.0" text="Manage Items" textFill="WHITE" AnchorPane.topAnchor="32.0">
+            <font>
+                <Font name="Ubuntu Bold" size="40.0" />
+            </font>
+        </Label>
+        <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="40.0" layoutY="453.0" onAction="#btnSaveOnAction" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #ff9e00;" text="SAVE" textFill="WHITE" AnchorPane.bottomAnchor="109.0">
+            <font>
+                <Font name="Ubuntu" size="20.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="btnAddNewItems" buttonType="RAISED" layoutX="996.0" layoutY="36.0" onAction="#btnAddNewOnAction" prefHeight="38.0" prefWidth="193.0" style="-fx-background-color: #5e548e;" text="+ New Item" textFill="WHITE" AnchorPane.topAnchor="38.0">
+            <font>
+                <Font name="Ubuntu" size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="231.0" layoutY="453.0" onAction="#btnDeleteOnAction" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #5e548e;" text="DELETE" textFill="WHITE" AnchorPane.bottomAnchor="109.0">
+            <font>
+                <Font name="Ubuntu" size="20.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+      <TextField fx:id="txtSearch" layoutX="774.0" layoutY="133.0" onKeyReleased="#searchOnAction" opacity="0.7" prefHeight="26.0" prefWidth="244.0" promptText="Search Here" />
+      <JFXComboBox fx:id="cmbSearchFields" layoutX="602.0" layoutY="133.0" unFocusColor="#cdcdcd" />
+    </children>
+</AnchorPane>

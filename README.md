@@ -1,6 +1,19 @@
 # Supermarket_POS
 Layered architecture assignment
 
+<h3>Using Technologies</h3>
+Java<br>
+JavaFX<br>
+CSS<br>
+MYSQL<br>
+Jasper<br>
+
+<h3>Libraries</h3>
+JFoenix<br>
+mysql-connector<br>
+Fontawesome<br>
+jasper libraries<br><br>
+
 ![Screenshot from 2022-06-18 23-52-26](https://user-images.githubusercontent.com/88975401/174451645-e89f9a62-b941-496b-935b-8dc0ce5af03b.png)
 
 ![Screenshot from 2022-06-18 23-52-51](https://user-images.githubusercontent.com/88975401/174451651-7306eaa5-b40b-411c-999a-17b437dfa7fe.png)

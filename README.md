@@ -1,4 +1,4 @@
-# Supermarket_POS
+# Supermarket POS
 Layered architecture assignment
 
 <h3>Using Technologies</h3>
